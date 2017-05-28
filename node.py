@@ -10,17 +10,30 @@ class Node:
     """
 
     def __init__(self, token):
-        word_string = ''.join(re.findall(r'[A-Za-z]', token))
-        number_string = ''.join(re.findall(r'[\-0-9]', token))
-        self._is_int = not word_string
+        word_str = ''.join(re.findall(r'[A-Za-z]', token))
+        number_str = ''.join(re.findall(r'[\-0-9]', token))
+        self._is_int = not word_str
+        self._token = self._parse_token(word_str, number_str)
 
+    def _parse_token(self, word_str, number_str):
+        """
+        Choose between candidate tokenized strings based on whether or note the
+        Node is an int or word node. If an int node, parse negative numbers
+        correctly.
+
+        Arguments:
+            word_str: The candidate word-tokenized string
+            number_str: The candidate number-tokenized string
+
+        Returns:
+            A string
+        """
         if self.is_word():
-            self._token = word_string
+            return word_str
         else:
-            is_nonnegative = number_string[0] != '-'
-            number = re.sub(r'[^0-9]', '', number_string)
-            complete_number = number if is_nonnegative else '-' + number
-            self._token = complete_number
+            is_nonnegative = number_str[0] != '-'
+            number = re.sub(r'[^0-9]', '', number_str)
+            return number if is_nonnegative else '-' + number
 
     def is_int(self):
         """
