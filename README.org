@@ -1,3 +1,13 @@
 * list_sort
 
 A TDD/OOD demo in Python.
+
+** Usage
+
+   #+BEGIN_SRC shell
+   $ ./listSorting.py INPUT_FILE_PATH OUTPUT_FILE_PATH
+   #+END_SRC
+
+** Requirements
+
+   Python 3.6.1
