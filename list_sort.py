@@ -2,10 +2,9 @@ from node import Node
 
 
 class ListSort:
-    def __init__(self, original):
-        self.__original = original
-        self.__node_list = list(map(Node, original.split()))
-        self.__tag_list = list(map(lambda x: x.is_int(), self.__node_list))
+    def __init__(self, original_string):
+        self.__node_list = [Node(x) for x in original_string.split()]
+        self.__tag_list = [x.is_int() for x in self.__node_list]
         self.__word_list = sorted([x for x in self.__node_list if x.is_word()])
         self.__int_list = sorted([x for x in self.__node_list if x.is_int()])
 
