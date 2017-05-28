@@ -10,8 +10,17 @@ class Node:
     """
 
     def __init__(self, token):
-        self._token = re.sub(r'[^0-9A-Za-z]', '', token)
-        self._is_int = not not re.match(r'[0-9]', token)
+        word_string = ''.join(re.findall(r'[A-Za-z]', token))
+        number_string = ''.join(re.findall(r'[\-0-9]', token))
+        self._is_int = not word_string
+
+        if self.is_word():
+            self._token = word_string
+        else:
+            is_nonnegative = number_string[0] != '-'
+            number = re.sub(r'[^0-9]', '', number_string)
+            complete_number = number if is_nonnegative else '-' + number
+            self._token = complete_number
 
     def is_int(self):
         """
