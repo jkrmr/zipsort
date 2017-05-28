@@ -9,12 +9,10 @@ class ListSort:
         self.__int_list = sorted([x for x in self.__node_list if x.is_int()])
 
     def zip_sorted(self):
-        zipped = []
+        return ' '.join([self.__int_or_word(x) for x in self.__tag_list])
 
-        for int_pos in self.__tag_list:
-            if int_pos:
-                zipped.append(self.__int_list.pop(0).value())
-            else:
-                zipped.append(self.__word_list.pop(0).value())
-
-        return ' '.join(str(x) for x in zipped)
+    def __int_or_word(self, is_int_position):
+        if is_int_position:
+            return str(self.__int_list.pop(0).value())
+        else:
+            return self.__word_list.pop(0).value()
