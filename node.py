@@ -3,20 +3,20 @@ import re
 
 class Node:
     def __init__(self, str):
-        self.__str = re.sub(r'[^0-9A-Za-z]', '', str)
-        self.__is_int = not not re.match(r'[0-9]', str)
+        self._str = re.sub(r'[^0-9A-Za-z]', '', str)
+        self._is_int = not not re.match(r'[0-9]', str)
 
     def is_int(self):
-        return self.__is_int
+        return self._is_int
 
     def is_word(self):
         return not self.is_int()
 
     def value(self):
         if self.is_int():
-            return int(self.__str)
+            return int(self._str)
         else:
-            return self.__str
+            return self._str
 
     def __lt__(self, other):
         return self.value().__lt__(other.value())
