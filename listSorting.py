@@ -5,20 +5,16 @@ import sys
 from list_sort import ListSort
 
 usage = """
-Usage: ./listSorting.py INPUT_PATH OUTPUT_PATH
+Usage: ./listSorting.py INPUT_FILE_PATH OUTPUT_FILE_PATH
 
 Example:
-    ./listSorting.py ./data .
+    ./listSorting.py ./data/input.txt output.txt
 
-Arguments:
-
-    INPUT_PATH: Directory containing list.txt
-    OUTPUT_PATH: Directory where result.txt will be written
 """
 
 if __name__ == '__main__':
-    path_to_input = '%s/list.txt' % sys.argv[1]
-    path_to_output = '%s/result.txt' % sys.argv[2]
+    path_to_input = sys.argv[1]
+    path_to_output = sys.argv[2]
 
     try:
         input_list = open(path_to_input).read()
