@@ -17,7 +17,7 @@ class Node:
 
     def _parse_token(self, word_str, number_str):
         """
-        Choose between candidate tokenized strings based on whether or note the
+        Choose between candidate tokenized strings based on whether or not the
         Node is an int or word node. If an int node, parse negative numbers
         correctly.
 
