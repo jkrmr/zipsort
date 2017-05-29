@@ -1,5 +1,8 @@
 * zipsort
 
+  #+ATTR_HTML: title="Circle CI status"
+  [[https://circleci.com/gh/jkrmr/zipsort/tree/master][https://circleci.com/gh/jkrmr/zipsort/tree/master.svg?style=svg]]
+
 A TDD/OOD demo in Python.
 
 ** Usage
