@@ -4,22 +4,22 @@ A TDD/OOD demo in Python.
 
 ** Usage
 
-   To run the script, run ~./zipsort~ with the input file as the argument.
+   To run the script, run ~zipsort.py~ with the input file as the argument.
    Output is written to standard output.
 
    #+BEGIN_SRC shell
-   $ ./zipsort data/sample.txt
+   $ python zipsort.py data/sample.txt
    #+END_SRC
 
 ** Tests
 
-   To run the test suite, issue the following:
+   To run the test suite, issue ~./make~:
 
    #+BEGIN_SRC
-   % ./test
-   ....
+   % ./make-test
+   .........
    ----------------------------------------------------------------------
-   Ran 4 tests in 0.001s
+   Ran 9 tests in 0.001s
 
    OK
    #+END_SRC

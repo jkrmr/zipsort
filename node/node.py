@@ -66,4 +66,14 @@ class Node:
             return self.value_string()
 
     def __lt__(self, other):
-        return self.value().__lt__(other.value())
+        """
+        Order is provided by value() members.
+        If comparing across types, raise ValueError.
+        """
+        if isinstance(self.value(), type(other.value())):
+            return self.value().__lt__(other.value())
+        else:
+            raise ValueError(
+                'Cannot compare incomparable types: \'%s\' (%s) \'%s\' (%s)' %
+                (self.value(), type(self.value()).__name__, other.value(),
+                 type(other.value()).__name__))

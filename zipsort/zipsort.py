@@ -1,4 +1,4 @@
-from node import Node
+from node.node import Node
 
 
 class ZipSort:

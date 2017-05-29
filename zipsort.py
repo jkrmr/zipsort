@@ -1,17 +1,15 @@
-#!/usr/bin/env python
-
 import sys
 
-from zip_sort import ZipSort
-
-usage = """
-Usage: ./zipsort INPUT_FILE_PATH
-
-Example:
-    ./zipsort data/sample.txt
-"""
+from zipsort.zipsort import ZipSort
 
 if __name__ == '__main__':
+    usage = """
+    Usage: python zipsort.py INPUT_FILE_PATH
+
+    Example:
+        python zipsort.py data/sample.txt
+    """
+
     try:
         path_to_input = sys.argv[1]
         input_list = open(path_to_input).read()

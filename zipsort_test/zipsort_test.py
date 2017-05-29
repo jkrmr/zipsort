@@ -1,6 +1,6 @@
 from unittest import TestCase
 
-from zip_sort import ZipSort
+from zipsort.zipsort import ZipSort
 
 
 class TestZipSort(TestCase):
