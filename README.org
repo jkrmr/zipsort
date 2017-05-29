@@ -16,7 +16,7 @@ A TDD/OOD demo in Python.
 
 ** Tests
 
-   To run the test suite, issue ~./make~:
+   To run the test suite, issue ~./make-test~:
 
    #+BEGIN_SRC
    % ./make-test
