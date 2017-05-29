@@ -5,30 +5,23 @@ import sys
 from zip_sort import ZipSort
 
 usage = """
-Usage: ./zip-sort INPUT_FILE_PATH OUTPUT_FILE_PATH
+Usage: ./zip-sort INPUT_FILE_PATH
 
 Example:
-    ./zip-sort ./data/input.txt output.txt
-
+    ./zip-sort data/input.txt
 """
 
 if __name__ == '__main__':
-    path_to_input = sys.argv[1]
-    path_to_output = sys.argv[2]
-
     try:
+        path_to_input = sys.argv[1]
         input_list = open(path_to_input).read()
+    except IndexError:
+        print(usage)
+        exit(1)
     except FileNotFoundError:
         print('Invalid input path: %s' % path_to_input)
         print(usage)
         exit(1)
 
-    try:
-        output_file = open(path_to_output, 'w+')
-    except FileNotFoundError:
-        print('Invalid output path: %s' % path_to_output)
-        print(usage)
-        exit(1)
-
     sorted = ZipSort(input_list).zip_sorted()
-    output_file.write(sorted)
+    sys.stdout.write('%s\n' % sorted)
