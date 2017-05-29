@@ -3,7 +3,7 @@
   #+ATTR_HTML: title="Circle CI status"
   [[https://circleci.com/gh/jkrmr/zipsort/tree/master][https://circleci.com/gh/jkrmr/zipsort/tree/master.svg?style=svg]]
 
-A TDD/OOD demo in Python.
+  A TDD/OOD demo in Python.
 
 ** Usage
 
@@ -12,6 +12,12 @@ A TDD/OOD demo in Python.
 
    #+BEGIN_SRC shell
    $ python zipsort.py data/sample.txt
+   #+END_SRC
+
+   Alternatively, input can be piped from stdin:
+
+   #+BEGIN_SRC shell
+   $ cat data/sample.txt | python zipsort.py
    #+END_SRC
 
 ** Tests
@@ -35,22 +41,22 @@ A TDD/OOD demo in Python.
 
 *** Possible performance optimizations
 
-   1. Caching tokenized strings in-memory (say, using a dictionary)
-   2. Caching tokenized strings with persistence (say, using a k-v store like Redis)
+    1. Caching tokenized strings in-memory (say, using a dictionary)
+    2. Caching tokenized strings with persistence (say, using a k-v store like Redis)
 
-   Both would improve on the current algorithm's performance when parsing
-   duplicate words, by storing and retrieving the already-computed values for a
-   given word.
+    Both would improve on the current algorithm's performance when parsing
+    duplicate words, by storing and retrieving the already-computed values for a
+    given word.
 
-   This would not change the overall linear-time complexity of the algorithm,
-   which seems unavoidable given that each word entry must be visited in order
-   to tokenize it, but it would improve empirical performance.
+    This would not change the overall linear-time complexity of the algorithm,
+    which seems unavoidable given that each word entry must be visited in order
+    to tokenize it, but it would improve empirical performance.
 
 *** Possible design enhancements
 
-   Refactor ~Node~ toward polymorphism, for example using inheritance or the
-   Strategy pattern.
+    Refactor ~Node~ toward polymorphism, for example using inheritance or the
+    Strategy pattern.
 
-   Currently Node's methods switch on ~is_int()~ and ~is_word()~-- the
-   underlying token could be better modeled by, for example, having a pair of
-   IntNode and WordNode classes.
+    Currently Node's methods switch on ~is_int()~ and ~is_word()~-- the
+    underlying token could be better modeled by, for example, having a pair of
+    IntNode and WordNode classes.
