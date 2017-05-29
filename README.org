@@ -1,14 +1,14 @@
-* zip_sorter
+* zipsort
 
 A TDD/OOD demo in Python.
 
 ** Usage
 
-   To run the script, run ~./zips-sort~ with the input file as the argument.
+   To run the script, run ~./zipsort~ with the input file as the argument.
    Output is written to standard output.
 
    #+BEGIN_SRC shell
-   $ ./zip-sort data/sample.txt
+   $ ./zipsort data/sample.txt
    #+END_SRC
 
 ** Tests

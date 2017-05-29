@@ -5,10 +5,10 @@ import sys
 from zip_sort import ZipSort
 
 usage = """
-Usage: ./zip-sort INPUT_FILE_PATH
+Usage: ./zipsort INPUT_FILE_PATH
 
 Example:
-    ./zip-sort data/input.txt
+    ./zipsort data/sample.txt
 """
 
 if __name__ == '__main__':
