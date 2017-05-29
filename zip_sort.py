@@ -1,7 +1,7 @@
 from node import Node
 
 
-class ListSort:
+class ZipSort:
     def __init__(self, original_string):
         # tokenize the input string
         node_list = [Node(x) for x in original_string.split()]

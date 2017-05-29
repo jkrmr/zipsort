@@ -2,13 +2,13 @@
 
 import sys
 
-from list_sort import ListSort
+from zip_sort import ZipSort
 
 usage = """
-Usage: ./listSorting.py INPUT_FILE_PATH OUTPUT_FILE_PATH
+Usage: ./zip-sort INPUT_FILE_PATH OUTPUT_FILE_PATH
 
 Example:
-    ./listSorting.py ./data/input.txt output.txt
+    ./zip-sort ./data/input.txt output.txt
 
 """
 
@@ -30,5 +30,5 @@ if __name__ == '__main__':
         print(usage)
         exit(1)
 
-    sorted = ListSort(input_list).zip_sorted()
+    sorted = ZipSort(input_list).zip_sorted()
     output_file.write(sorted)
