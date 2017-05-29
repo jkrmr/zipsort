@@ -1,13 +1,53 @@
-* list_sort
+* zip_sorter
 
 A TDD/OOD demo in Python.
 
 ** Usage
 
+   To run the script, run ~./zips-sort~ with the input file as the argument.
+   Output is written to standard output.
+
    #+BEGIN_SRC shell
-   $ ./listSorting.py INPUT_FILE_PATH OUTPUT_FILE_PATH
+   $ ./zip-sort data/sample.txt
+   #+END_SRC
+
+** Tests
+
+   To run the test suite, issue the following:
+
+   #+BEGIN_SRC
+   % ./test
+   ....
+   ----------------------------------------------------------------------
+   Ran 4 tests in 0.001s
+
+   OK
    #+END_SRC
 
 ** Requirements
 
    Python 3.6.1
+
+** Implementation notes
+
+*** Possible performance optimizations
+
+   1. Caching tokenized strings in-memory (say, using a dictionary)
+   2. Caching tokenized strings with persistence (say, using a k-v store like Redis)
+
+   Both would improve on the current algorithm's performance when parsing
+   duplicate words, by storing and retrieving the already-computed values for a
+   given word.
+
+   This would not change the overall linear-time complexity of the algorithm,
+   which seems unavoidable given that each word entry must be visited in order
+   to tokenize it, but it would improve empirical performance.
+
+*** Possible design enhancements
+
+   Refactor ~Node~ toward polymorphism, for example using inheritance or the
+   Strategy pattern.
+
+   Currently Node's methods switch on ~is_int()~ and ~is_word()~-- the
+   underlying token could be better modeled by, for example, having a pair of
+   IntNode and WordNode classes.
