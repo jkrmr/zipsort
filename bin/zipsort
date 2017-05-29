@@ -1,17 +1,20 @@
+#!/usr/bin/env python3
+
 import sys
 
+import __init__
 from zipsort.zipsort import ZipSort
 
 if __name__ == '__main__':
     usage = """
-    Usage: python zipsort.py INPUT_FILE_PATH
+    Usage: ./zipsort INPUT_FILE_PATH
 
     Example:
-        python zipsort.py data/sample.txt
+        ./zipsort data/sample.txt
 
     Alternatively, stream input from stdin:
 
-    cat INPUT_FILE_PATH | python zipsort.py
+    cat INPUT_FILE_PATH | ./zipsort
     """
     try:
         path_to_input = sys.argv[1]

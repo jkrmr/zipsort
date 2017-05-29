@@ -7,17 +7,17 @@
 
 ** Usage
 
-   To run the script, run ~zipsort.py~ with the input file as the argument.
-   Output is written to standard output.
+   To run the script, run the executable in ~./bin/~ with the input file as the
+   argument. Output is written to standard output.
 
    #+BEGIN_SRC shell
-   $ python zipsort.py data/sample.txt
+   $ bin/zipsort data/sample.txt
    #+END_SRC
 
    Alternatively, input can be piped from stdin:
 
    #+BEGIN_SRC shell
-   $ cat data/sample.txt | python zipsort.py
+   $ cat data/sample.txt | bin/zipsort
    #+END_SRC
 
 ** Tests
