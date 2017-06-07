@@ -3,7 +3,26 @@
   #+ATTR_HTML: title="Circle CI status"
   [[https://circleci.com/gh/jkrmr/zipsort/tree/master][https://circleci.com/gh/jkrmr/zipsort/tree/master.svg?style=svg]]
 
-  A TDD/OOD demo in Python.
+  A command-line application that parses words and integers from an input of the
+  form:
+
+  #+BEGIN_SRC
+  Ba!!ker 5-5 c 5 a f d 1%0 h e -1
+  6!6 car 6 Auto f-!r*8ance dance 1%0 h e -1
+  -tonkin 5-5 c 5 a f d 1%0 h e -1
+  #+END_SRC
+
+  and produces sorted output of the form:
+
+  #+BEGIN_SRC
+  Baker -1 a 5 c d e 10 f h 55
+  -1 Auto 6 car dance e 10 france h 66
+  a -1 c 5 d e f 10 h tonkin 55
+  #+END_SRC
+
+  That is, with words and integers sorted independently (the former
+  lexicograpically, the latter numerically), and both sorted lists interleaved
+  so that positions occupied by a word/integer remain so after sorting.
 
 ** Usage
 
