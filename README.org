@@ -1,6 +1,6 @@
 * zipsort
 
-  #+ATTR_HTML: title="Circle CI status"
+  #+CAPTION: title="Circle CI status"
   [[https://circleci.com/gh/jkrmr/zipsort/tree/master][https://circleci.com/gh/jkrmr/zipsort/tree/master.svg?style=svg]]
 
   A command-line application that parses words and integers from an input of the
