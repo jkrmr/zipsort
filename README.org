@@ -1,7 +1,7 @@
 * zipsort
 
   #+CAPTION: title="Circle CI status"
-  [[https://circleci.com/gh/jkrmr/zipsort/tree/master][https://circleci.com/gh/jkrmr/zipsort/tree/master.svg?style=svg]]
+  [[https://circleci.com/gh/jkrmr/zipsort/tree/master][https://circleci.com/gh/jmromer/zipsort/tree/master.svg?style=svg]]
 
   A command-line application that parses words and integers from an input of the
   form:
